@@ -2,14 +2,12 @@ const cron = require("node-cron");
 var request = require("request");
 
 cron.schedule("* * * * *", async () => {
-  var ts;
-  var aqius;
-  var aqicn;
-  var maincn;
+  /*  this cron is runing every minute */
+  //lon and lat for paris area
   var latitude = 48.8566;
   var longitude = 2.3522;
 
-  const url =
+  const url = // we call getWeather api to get object data that we have to save into our data base
     "http://127.0.0.1:3000/getWeather?latitude=" +
     latitude +
     "&longitude=" +
@@ -30,7 +28,7 @@ cron.schedule("* * * * *", async () => {
       .then((res) => res.json())
       .then((data) => {
         console.log("data", data);
-        obj = data;
+        obj = data; // we make the result of the fetch into this object named obj
       })
       .then(() => {
         console.log("obj", obj);
@@ -44,9 +42,9 @@ cron.schedule("* * * * *", async () => {
       url: "http://127.0.0.1:3000/postWeather",
       method: "POST",
       json: true, // <--Very important!!!
-      body: obj,
+      body: obj, // and here we go with the insertion into the body request :)
     });
   } catch (error) {
-    console.log("error=>", error);
+    console.log("error", error);
   }
 });
