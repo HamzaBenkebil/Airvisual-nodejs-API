@@ -1,10 +1,10 @@
 # Airvisual-nodejs-API
 
-This is a simple RESTful API built with Node.js that uses the AirVisual API to display weather data for a specified location.
+This is a simple RESTful API built with Node.js with Express framework, that uses the AirVisual API to display weather data for a specified location.
 
 # Installation:
 
-To use this API, you will need to have Node.js and npm installed on your machine. You can then install the necessary packages by running the following command in your terminal:
+To use this API, you will need to have Node.js and npm and ExpressJs installed on your machine. You can then install the necessary packages by running the following command in your terminal:
   - npm install
  
 # Usage
