@@ -6,7 +6,8 @@ This is a simple RESTful API built with Node.js with Express framework, that use
 
 To use this API, you will need to have Node.js and npm and ExpressJs installed on your machine. You can then install the necessary packages by running the following command in your terminal:
   - npm install
- 
+Make sure that you have mysql server installed on your host then you can create a database named : weatherdb
+
 # Usage
 To start the API server, run the following command in your terminal:
   - node index.js
